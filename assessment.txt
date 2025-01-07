@@ -1,2 +1,141 @@
 Give me some idea on what is a Data type. What are Primitive Data types and Non-Primitive Data types. Explain with some examples.
 ans:-
+
+What is a Data Type in Java?
+In Java, a data type defines the type of data that a variable can hold, such as integers, floating-point numbers, or characters. Java has two main categories of data types: Primitive Data Types and Non-Primitive Data Types.
+
+Primitive Data Types in Java
+These are the most basic and pre-defined data types in Java. They are stored directly in memory and do not rely on objects.
+
+Types of Primitive Data Types
+byte:
+
+Size: 1 byte (8 bits).
+Range: -128 to 127.
+Example: byte b = 10;
+short:
+
+Size: 2 bytes (16 bits).
+Range: -32,768 to 32,767.
+Example: short s = 300;
+int:
+
+Size: 4 bytes (32 bits).
+Range: -2,147,483,648 to 2,147,483,647.
+Example: int num = 1000;
+long:
+
+Size: 8 bytes (64 bits).
+Range: Very large range.
+Example: long bigNum = 100000L;
+float:
+
+Size: 4 bytes (32 bits).
+Range: Up to 7 decimal digits.
+Example: float pi = 3.14f;
+double:
+
+Size: 8 bytes (64 bits).
+Range: Up to 15 decimal digits.
+Example: double bigPi = 3.14159265358979;
+char:
+
+Size: 2 bytes (16 bits).
+Represents a single character.
+Example: char letter = 'A';
+boolean:
+
+Size: 1 bit.
+Values: true or false.
+Example: boolean isActive = true;
+Non-Primitive Data Types in Java
+Non-primitive data types (or reference types) are more complex. They are created by the programmer and refer to objects.
+
+Types of Non-Primitive Data Types
+String:
+
+A sequence of characters.
+Example: String name = "Alice";
+Arrays:
+
+A collection of elements of the same type.
+Example:
+java
+Copy code
+int[] numbers = {1, 2, 3, 4};
+Classes:
+
+User-defined blueprints to create objects.
+Example:
+java
+Copy code
+class Person {
+    String name;
+    int age;
+}
+Interfaces:
+
+A reference type that specifies methods a class must implement.
+Example:
+java
+Copy code
+interface Animal {
+    void eat();
+    void sleep();
+}
+Collections (e.g., List, Map, Set):
+
+Dynamic and flexible data structures.
+Example:
+java
+Copy code
+List<String> names = new ArrayList<>();
+names.add("Alice");
+
+
+Example codes:
+1.Primitive Data Types:
+public class Main {
+    public static void main(String[] args) {
+        int age = 25;          
+        double salary = 45000.75;
+        char grade = 'A';      
+        boolean isEligible = true;
+
+        System.out.println("Age: " + age);
+        System.out.println("Salary: " + salary);
+        System.out.println("Grade: " + grade);
+        System.out.println("Is Eligible: " + isEligible);
+    }
+}
+2.Non-Primitive Data Types
+import java.util.ArrayList;
+
+public class Main {
+    public static void main(String[] args) {
+        
+        String name = "Alice";
+        System.out.println("Name: " + name);
+
+        
+        int[] numbers = {10, 20, 30};
+        System.out.println("First Number: " + numbers[0]);
+
+     
+        Person person = new Person();
+        person.name = "Bob";
+        person.age = 30;
+        System.out.println("Person Name: " + person.name + ", Age: " + person.age);
+
+        
+        ArrayList<String> fruits = new ArrayList<>();
+        fruits.add("Apple");
+        fruits.add("Banana");
+        System.out.println("Fruits: " + fruits);
+    }
+}
+
+class Person {
+    String name;
+    int age;
+}
